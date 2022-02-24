@@ -10,7 +10,7 @@ info:
     flexibility found within the DCD visual tool. Both tools are consistent with
     their concepts and lend well to making the experience smooth and intuitive.
   title: IONOS DBaaS REST API
-  version: 0.0.1
+  version: 0.1.0
 servers:
 - description: Production
   url: https://api.ionos.com/databases/postgresql
@@ -822,6 +822,7 @@ components:
     StorageSize:
       description: The amount of storage per instance in megabytes.
       example: 5000
+      maximum: 2097152
       minimum: 2048
       type: integer
     Location:
@@ -873,7 +874,7 @@ components:
           location: de/fra
           synchronizationMode: ASYNCHRONOUS
           connections:
-          - datacenterId: datacenterId
+          - datacenterId: 5a029f4a-72e5-11ec-90d6-0242ac120003
             cidr: 192.168.1.100/24
             lanId: "2"
           ram: 2048
@@ -905,7 +906,7 @@ components:
         location: de/fra
         synchronizationMode: ASYNCHRONOUS
         connections:
-        - datacenterId: datacenterId
+        - datacenterId: 5a029f4a-72e5-11ec-90d6-0242ac120003
           cidr: 192.168.1.100/24
           lanId: "2"
         ram: 2048
@@ -937,6 +938,7 @@ components:
         storageSize:
           description: The amount of storage per instance in megabytes.
           example: 5000
+          maximum: 2097152
           minimum: 2048
           type: integer
         storageType:
@@ -994,7 +996,7 @@ components:
           displayName: PostgreSQL cluster
           storageSize: 5000
           connections:
-          - datacenterId: datacenterId
+          - datacenterId: 5a029f4a-72e5-11ec-90d6-0242ac120003
             cidr: 192.168.1.100/24
             lanId: "2"
           ram: 2048
@@ -1016,7 +1018,7 @@ components:
         displayName: PostgreSQL cluster
         storageSize: 5000
         connections:
-        - datacenterId: datacenterId
+        - datacenterId: 5a029f4a-72e5-11ec-90d6-0242ac120003
           cidr: 192.168.1.100/24
           lanId: "2"
         ram: 2048
@@ -1037,6 +1039,7 @@ components:
         storageSize:
           description: The amount of storage per instance in megabytes.
           example: 5000
+          maximum: 2097152
           minimum: 2048
           type: integer
         connections:
@@ -1107,12 +1110,13 @@ components:
     Connection:
       description: Details about the network connection for your cluster.
       example:
-        datacenterId: datacenterId
+        datacenterId: 5a029f4a-72e5-11ec-90d6-0242ac120003
         cidr: 192.168.1.100/24
         lanId: "2"
       properties:
         datacenterId:
           description: The datacenter to connect your cluster to.
+          example: 5a029f4a-72e5-11ec-90d6-0242ac120003
           type: string
         lanId:
           description: The numeric LAN ID to connect your cluster to.
@@ -1216,7 +1220,7 @@ components:
           location: de/fra
           synchronizationMode: ASYNCHRONOUS
           connections:
-          - datacenterId: datacenterId
+          - datacenterId: 5a029f4a-72e5-11ec-90d6-0242ac120003
             cidr: 192.168.1.100/24
             lanId: "2"
           postgresVersion: "13"
@@ -1248,7 +1252,7 @@ components:
         location: de/fra
         synchronizationMode: ASYNCHRONOUS
         connections:
-        - datacenterId: datacenterId
+        - datacenterId: 5a029f4a-72e5-11ec-90d6-0242ac120003
           cidr: 192.168.1.100/24
           lanId: "2"
         postgresVersion: "13"
@@ -1289,6 +1293,7 @@ components:
         storageSize:
           description: The amount of storage per instance in megabytes.
           example: 5000
+          maximum: 2097152
           minimum: 2048
           type: integer
         storageType:
@@ -1364,6 +1369,8 @@ components:
       description: The S3 location where the backups will be stored.
       enum:
       - de
+      - eu-south-2
+      - eu-central-2
       example: de
       type: string
     MaintenanceWindow:
