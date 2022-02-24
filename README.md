@@ -1,3 +1,5 @@
+![Alt text](.github/IONOS.CLOUD.BLU.svg?raw=true "Title")
+
 # Go API client for ionoscloud
 
 An enterprise-grade Database is provided as a Service (DBaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.
