@@ -1,5 +1,6 @@
 ![CI](https://github.com/ionos-cloud/sdk-resources/workflows/%5B%20CI%20%5D%20DBaaS%20Postgres%20/%20Go/badge.svg)
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sdk-go-dbaas-postgres&metric=alert_status)](https://sonarcloud.io/dashboard?id=sdk-go-dbaas-postgres)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=sdk-go-dbaas-postgres&metric=bugs)](https://sonarcloud.io/dashboard?id=sdk-go-dbaas-postgres)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=sdk-go-dbaas-postgres&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=sdk-go-dbaas-postgres)
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=sdk-go-dbaas-postgres&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=sdk-go-dbaas-postgres)
