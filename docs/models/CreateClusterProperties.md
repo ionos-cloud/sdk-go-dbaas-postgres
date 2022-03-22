@@ -15,6 +15,7 @@ Properties with all data needed to create a new PostgreSQL cluster.
 |**StorageType** | [**StorageType**](StorageType.md) |  | |
 |**Connections** | [**[]Connection**](Connection.md) |  | |
 |**Location** | [**Location**](Location.md) |  | |
+|**BackupLocation** | Pointer to [**BackupLocation**](BackupLocation.md) |  | [optional] |
 |**DisplayName** | **string** | The friendly name of your cluster. | |
 |**MaintenanceWindow** | Pointer to [**MaintenanceWindow**](MaintenanceWindow.md) |  | [optional] |
 |**Credentials** | [**DBUser**](DBUser.md) |  | |
@@ -183,6 +184,31 @@ and a boolean to check if the value has been set.
 
 SetLocation sets Location field to given value.
 
+
+### GetBackupLocation
+
+`func (o *CreateClusterProperties) GetBackupLocation() BackupLocation`
+
+GetBackupLocation returns the BackupLocation field if non-nil, zero value otherwise.
+
+### GetBackupLocationOk
+
+`func (o *CreateClusterProperties) GetBackupLocationOk() (*BackupLocation, bool)`
+
+GetBackupLocationOk returns a tuple with the BackupLocation field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBackupLocation
+
+`func (o *CreateClusterProperties) SetBackupLocation(v BackupLocation)`
+
+SetBackupLocation sets BackupLocation field to given value.
+
+### HasBackupLocation
+
+`func (o *CreateClusterProperties) HasBackupLocation() bool`
+
+HasBackupLocation returns a boolean if a field has been set.
 
 ### GetDisplayName
 

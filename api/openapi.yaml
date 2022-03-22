@@ -456,15 +456,8 @@ paths:
         schema:
           type: string
         style: simple
-      - description: The maximal number of log lines to return.
-        explode: true
-        in: query
-        name: limit
-        required: false
-        schema:
-          $ref: '#/components/schemas/LimitQuery'
-        style: form
-      - description: The start time for the query in RFC3339 format.
+      - description: The start time for the query in RFC3339 format. Must not be more
+          than 30 days ago but before the end parameter. The default is 30 days ago.
         explode: true
         in: query
         name: start
@@ -473,7 +466,8 @@ paths:
           format: date-time
           type: string
         style: form
-      - description: The end time for the query in RFC3339 format.
+      - description: The end time for the query in RFC3339 format. Must not be greater
+          than now. The default is the current timestamp.
         explode: true
         in: query
         name: end
@@ -481,6 +475,31 @@ paths:
         schema:
           format: date-time
           type: string
+        style: form
+      - description: The direction in which to scan through the logs. The logs are
+          returned in order of the direction.
+        explode: true
+        in: query
+        name: direction
+        required: false
+        schema:
+          default: BACKWARD
+          enum:
+          - BACKWARD
+          - FORWARD
+          type: string
+        style: form
+      - description: The maximal number of log lines to return.  If the limit is reached
+          then log lines will be cut at the end (respecting the scan direction).
+        explode: true
+        in: query
+        name: limit
+        required: false
+        schema:
+          default: 100
+          maximum: 5000
+          minimum: 1
+          type: integer
         style: form
       responses:
         "200":
@@ -703,35 +722,6 @@ components:
       schema:
         type: string
       style: simple
-    LimitQuery:
-      description: The maximal number of log lines to return.
-      explode: true
-      in: query
-      name: limit
-      required: false
-      schema:
-        $ref: '#/components/schemas/LimitQuery'
-      style: form
-    StartQuery:
-      description: The start time for the query in RFC3339 format.
-      explode: true
-      in: query
-      name: start
-      required: false
-      schema:
-        format: date-time
-        type: string
-      style: form
-    EndQuery:
-      description: The end time for the query in RFC3339 format.
-      explode: true
-      in: query
-      name: end
-      required: false
-      schema:
-        format: date-time
-        type: string
-      style: form
   responses:
     ApiError:
       content:
@@ -801,12 +791,6 @@ components:
       maximum: 5
       minimum: 1
       type: integer
-    LimitQuery:
-      description: The maximal number of log lines to return.
-      example: 10
-      maximum: 5000
-      minimum: 1
-      type: integer
     Cores:
       description: The number of CPU cores per instance.
       example: 4
@@ -869,6 +853,7 @@ components:
             dayOfTheWeek: Monday
             time: 16:30:59
           cores: 4
+          backupLocation: de
           storageSize: 5000
           storageType: HDD
           location: de/fra
@@ -901,6 +886,7 @@ components:
           dayOfTheWeek: Monday
           time: 16:30:59
         cores: 4
+        backupLocation: de
         storageSize: 5000
         storageType: HDD
         location: de/fra
@@ -951,6 +937,8 @@ components:
           type: array
         location:
           $ref: '#/components/schemas/Location'
+        backupLocation:
+          $ref: '#/components/schemas/BackupLocation'
         displayName:
           description: The friendly name of your cluster.
           example: PostgreSQL cluster

@@ -12,9 +12,10 @@ All URIs are relative to *https://api.ionos.com/databases/postgresql*
 
 ```go
 var result ClusterLogs = ClusterLogsGet(ctx, clusterId)
-                      .Limit(limit)
                       .Start(start)
                       .End(end)
+                      .Direction(direction)
+                      .Limit(limit)
                       .Execute()
 ```
 
@@ -37,13 +38,14 @@ import (
 
 func main() {
     clusterId := "clusterId_example" // string | The unique ID of the cluster.
-    limit := int32(56) // int32 | The maximal number of log lines to return. (optional)
-    start := time.Now() // time.Time | The start time for the query in RFC3339 format. (optional)
-    end := time.Now() // time.Time | The end time for the query in RFC3339 format. (optional)
+    start := time.Now() // time.Time | The start time for the query in RFC3339 format. Must not be more than 30 days ago but before the end parameter. The default is 30 days ago. (optional)
+    end := time.Now() // time.Time | The end time for the query in RFC3339 format. Must not be greater than now. The default is the current timestamp. (optional)
+    direction := "direction_example" // string | The direction in which to scan through the logs. The logs are returned in order of the direction. (optional) (default to "BACKWARD")
+    limit := int32(56) // int32 | The maximal number of log lines to return.  If the limit is reached then log lines will be cut at the end (respecting the scan direction). (optional) (default to 100)
 
     configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "HOST_URL")
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resource, resp, err := apiClient.LogsApi.ClusterLogsGet(context.Background(), clusterId).Limit(limit).Start(start).End(end).Execute()
+    resource, resp, err := apiClient.LogsApi.ClusterLogsGet(context.Background(), clusterId).Start(start).End(end).Direction(direction).Limit(limit).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `LogsApi.ClusterLogsGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", resp)
@@ -68,9 +70,10 @@ Other parameters are passed through a pointer to an apiClusterLogsGetRequest str
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **limit** | **int32** | The maximal number of log lines to return. | |
-| **start** | **time.Time** | The start time for the query in RFC3339 format. | |
-| **end** | **time.Time** | The end time for the query in RFC3339 format. | |
+| **start** | **time.Time** | The start time for the query in RFC3339 format. Must not be more than 30 days ago but before the end parameter. The default is 30 days ago. | |
+| **end** | **time.Time** | The end time for the query in RFC3339 format. Must not be greater than now. The default is the current timestamp. | |
+| **direction** | **string** | The direction in which to scan through the logs. The logs are returned in order of the direction. | [default to &quot;BACKWARD&quot;]|
+| **limit** | **int32** | The maximal number of log lines to return.  If the limit is reached then log lines will be cut at the end (respecting the scan direction). | [default to 100]|
 
 ### Return type
 
