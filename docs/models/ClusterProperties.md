@@ -9,8 +9,8 @@ Properties of a database cluster
 |------------ | ------------- | ------------- | -------------|
 |**DisplayName** | Pointer to **string** | The friendly name of your cluster. | [optional] |
 |**PostgresVersion** | Pointer to **string** | The PostgreSQL version of your cluster. | [optional] |
-|**Location** | Pointer to [**Location**](Location.md) |  | [optional] |
-|**BackupLocation** | Pointer to [**BackupLocation**](BackupLocation.md) |  | [optional] |
+|**Location** | Pointer to **string** | The physical location where the cluster will be created. This will be where all of your instances live. Property cannot be modified after datacenter creation.  | [optional] |
+|**BackupLocation** | Pointer to **string** | The S3 location where the backups will be stored. | [optional] |
 |**Instances** | Pointer to **int32** | The total number of instances in the cluster (one master and n-1 standbys).  | [optional] |
 |**Ram** | Pointer to **int32** | The amount of memory per instance in megabytes. Has to be a multiple of 1024. | [optional] |
 |**Cores** | Pointer to **int32** | The number of CPU cores per instance. | [optional] |
@@ -75,20 +75,20 @@ HasPostgresVersion returns a boolean if a field has been set.
 
 ### GetLocation
 
-`func (o *ClusterProperties) GetLocation() Location`
+`func (o *ClusterProperties) GetLocation() string`
 
 GetLocation returns the Location field if non-nil, zero value otherwise.
 
 ### GetLocationOk
 
-`func (o *ClusterProperties) GetLocationOk() (*Location, bool)`
+`func (o *ClusterProperties) GetLocationOk() (*string, bool)`
 
 GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLocation
 
-`func (o *ClusterProperties) SetLocation(v Location)`
+`func (o *ClusterProperties) SetLocation(v string)`
 
 SetLocation sets Location field to given value.
 
@@ -100,20 +100,20 @@ HasLocation returns a boolean if a field has been set.
 
 ### GetBackupLocation
 
-`func (o *ClusterProperties) GetBackupLocation() BackupLocation`
+`func (o *ClusterProperties) GetBackupLocation() string`
 
 GetBackupLocation returns the BackupLocation field if non-nil, zero value otherwise.
 
 ### GetBackupLocationOk
 
-`func (o *ClusterProperties) GetBackupLocationOk() (*BackupLocation, bool)`
+`func (o *ClusterProperties) GetBackupLocationOk() (*string, bool)`
 
 GetBackupLocationOk returns a tuple with the BackupLocation field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetBackupLocation
 
-`func (o *ClusterProperties) SetBackupLocation(v BackupLocation)`
+`func (o *ClusterProperties) SetBackupLocation(v string)`
 
 SetBackupLocation sets BackupLocation field to given value.
 

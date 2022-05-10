@@ -14,7 +14,6 @@
 ## Models
 
 * [APIVersion](models/APIVersion.md)
-* [BackupLocation](models/BackupLocation.md)
 * [BackupMetadata](models/BackupMetadata.md)
 * [BackupResponse](models/BackupResponse.md)
 * [ClusterBackup](models/ClusterBackup.md)
@@ -35,7 +34,6 @@
 * [DayOfTheWeek](models/DayOfTheWeek.md)
 * [ErrorMessage](models/ErrorMessage.md)
 * [ErrorResponse](models/ErrorResponse.md)
-* [Location](models/Location.md)
 * [MaintenanceWindow](models/MaintenanceWindow.md)
 * [Metadata](models/Metadata.md)
 * [Pagination](models/Pagination.md)

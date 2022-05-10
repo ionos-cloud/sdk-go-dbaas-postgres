@@ -814,15 +814,15 @@ components:
         The physical location where the cluster will be created. This will be
         where all of your instances live. Property cannot be modified after
         datacenter creation.
-      enum:
+      example: de/fra
+      type: string
+      x-extensible-enum:
       - de/fra
       - de/txl
       - gb/lhr
       - es/vit
       - us/ewr
       - us/las
-      example: de/fra
-      type: string
     DisplayName:
       description: The friendly name of your cluster.
       example: PostgreSQL cluster
@@ -936,9 +936,27 @@ components:
           minItems: 1
           type: array
         location:
-          $ref: '#/components/schemas/Location'
+          description: |
+            The physical location where the cluster will be created. This will be
+            where all of your instances live. Property cannot be modified after
+            datacenter creation.
+          example: de/fra
+          type: string
+          x-extensible-enum:
+          - de/fra
+          - de/txl
+          - gb/lhr
+          - es/vit
+          - us/ewr
+          - us/las
         backupLocation:
-          $ref: '#/components/schemas/BackupLocation'
+          description: The S3 location where the backups will be stored.
+          example: de
+          type: string
+          x-extensible-enum:
+          - de
+          - eu-south-2
+          - eu-central-2
         displayName:
           description: The friendly name of your cluster.
           example: PostgreSQL cluster
@@ -1255,9 +1273,27 @@ components:
           example: "13"
           type: string
         location:
-          $ref: '#/components/schemas/Location'
+          description: |
+            The physical location where the cluster will be created. This will be
+            where all of your instances live. Property cannot be modified after
+            datacenter creation.
+          example: de/fra
+          type: string
+          x-extensible-enum:
+          - de/fra
+          - de/txl
+          - gb/lhr
+          - es/vit
+          - us/ewr
+          - us/las
         backupLocation:
-          $ref: '#/components/schemas/BackupLocation'
+          description: The S3 location where the backups will be stored.
+          example: de
+          type: string
+          x-extensible-enum:
+          - de
+          - eu-south-2
+          - eu-central-2
         instances:
           description: |
             The total number of instances in the cluster (one master and n-1
@@ -1355,12 +1391,12 @@ components:
       type: object
     BackupLocation:
       description: The S3 location where the backups will be stored.
-      enum:
+      example: de
+      type: string
+      x-extensible-enum:
       - de
       - eu-south-2
       - eu-central-2
-      example: de
-      type: string
     MaintenanceWindow:
       description: |
         A weekly 4 hour-long window, during which maintenance might occur
@@ -1402,10 +1438,13 @@ components:
           type: string
       type: object
     StorageType:
-      description: The storage type used in your cluster.
+      description: The storage type used in your cluster. (Value "SSD" is deprecated.
+        Use the equivalent "SSD Premium" instead)
       enum:
       - HDD
       - SSD
+      - SSD Standard
+      - SSD Premium
       example: HDD
       type: string
     Pagination:
