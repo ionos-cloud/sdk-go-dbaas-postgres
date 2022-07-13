@@ -1,16 +1,30 @@
 # ErrorResponse
 
-
-
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**HttpStatus** | Pointer to **int32** | HTTP status code of the operation | [optional] |
+|**HttpStatus** | Pointer to **int32** | The HTTP status code of the operation. | [optional] |
 |**Messages** | Pointer to [**[]ErrorMessage**](ErrorMessage.md) |  | [optional] |
 
 ## Methods
 
+### NewErrorResponse
+
+`func NewErrorResponse() *ErrorResponse`
+
+NewErrorResponse instantiates a new ErrorResponse object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewErrorResponseWithDefaults
+
+`func NewErrorResponseWithDefaults() *ErrorResponse`
+
+NewErrorResponseWithDefaults instantiates a new ErrorResponse object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
 
 ### GetHttpStatus
 

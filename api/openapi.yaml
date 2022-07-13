@@ -10,7 +10,7 @@ info:
     flexibility found within the DCD visual tool. Both tools are consistent with
     their concepts and lend well to making the experience smooth and intuitive.
   title: IONOS DBaaS REST API
-  version: 0.1.0
+  version: 1.0.0
 servers:
 - description: Production
   url: https://api.ionos.com/databases/postgresql
@@ -18,15 +18,15 @@ security:
 - basicAuth: []
 - tokenAuth: []
 tags:
-- description: everything about PostgreSQL clusters
+- description: Everything about PostgreSQL clusters.
   name: Clusters
-- description: everything about PostgreSQL backups
+- description: Everything about PostgreSQL backups.
   name: Backups
-- description: everything about PostgreSQL restores
+- description: Everything about PostgreSQL restores.
   name: Restores
-- description: everything about PostgreSQL logs
+- description: Everything about PostgreSQL logs.
   name: Logs
-- description: all metadata about the API, like versions
+- description: All metadata about the API, like versions.
   name: Metadata
 paths:
   /clusters:
@@ -51,7 +51,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ClusterList'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -190,7 +190,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ClusterResponse'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -241,7 +241,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ClusterResponse'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -277,7 +277,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ClusterBackupList'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -324,7 +324,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/BackupResponse'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -369,7 +369,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ClusterBackupList'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -417,7 +417,7 @@ paths:
         required: true
       responses:
         "202":
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -507,7 +507,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ClusterLogs'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -543,7 +543,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PostgresVersionList'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -590,7 +590,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/PostgresVersionList'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -626,7 +626,7 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/APIVersion'
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -664,7 +664,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/APIVersion'
                 type: array
-          description: successful operation
+          description: Successful operation.
         default:
           content:
             application/json:
@@ -746,7 +746,7 @@ components:
     ErrorResponse:
       properties:
         httpStatus:
-          description: HTTP status code of the operation
+          description: The HTTP status code of the operation.
           example: 400
           type: integer
         messages:
@@ -983,7 +983,7 @@ components:
       - synchronizationMode
       type: object
     PatchClusterRequest:
-      description: Request payload to change a cluster
+      description: Request payload to change a cluster.
       example:
         metadata:
           createdByUserId: 87f9a82e-b28d-49ed-9d04-fba2c0459cd3
@@ -1014,7 +1014,7 @@ components:
           $ref: '#/components/schemas/PatchClusterProperties'
       type: object
     PatchClusterProperties:
-      description: Properties of the payload to change a cluster
+      description: Properties of the payload to change a cluster.
       example:
         maintenanceWindow:
           dayOfTheWeek: Monday
@@ -1102,7 +1102,7 @@ components:
       properties:
         username:
           description: |
-            The username for the initial postgres user. some system usernames
+            The username for the initial PostgreSQL user. Some system usernames
             are restricted (e.g. "postgres", "admin", "standby").
           example: db-admin
           type: string
@@ -1143,7 +1143,7 @@ components:
       - lanId
       type: object
     Metadata:
-      description: Metadata of the resource
+      description: Metadata of the resource.
       example:
         createdByUserId: 87f9a82e-b28d-49ed-9d04-fba2c0459cd3
         createdDate: 2020-12-10T13:37:50+01:00
@@ -1202,7 +1202,7 @@ components:
           $ref: '#/components/schemas/State'
       type: object
     ClusterResponse:
-      description: A database cluster
+      description: A database cluster.
       example:
         metadata:
           createdByUserId: 87f9a82e-b28d-49ed-9d04-fba2c0459cd3
@@ -1244,7 +1244,7 @@ components:
           $ref: '#/components/schemas/ClusterProperties'
       type: object
     ClusterProperties:
-      description: Properties of a database cluster
+      description: Properties of a database cluster.
       example:
         maintenanceWindow:
           dayOfTheWeek: Monday
@@ -1334,14 +1334,16 @@ components:
           $ref: '#/components/schemas/SynchronizationMode'
       type: object
     BackupResponse:
-      description: A database backup
+      description: A database backup.
       example:
         metadata:
           createdDate: 2020-12-10T13:37:50+01:00
           state: AVAILABLE
         id: 498ae72f-411f-11eb-9d07-046c59cc737e
         properties:
+          size: 2052
           earliestRecoveryTargetTime: 2021-10-23T01:21:10Z
+          location: de
           id: 498ae72f-411f-11eb-9d07-046c59cc737e
           clusterId: 498ae72f-411f-11eb-9d07-046c59cc737e
           isActive: true
@@ -1359,9 +1361,11 @@ components:
           $ref: '#/components/schemas/ClusterBackup'
       type: object
     ClusterBackup:
-      description: a backup object
+      description: A backup object.
       example:
+        size: 2052
         earliestRecoveryTargetTime: 2021-10-23T01:21:10Z
+        location: de
         id: 498ae72f-411f-11eb-9d07-046c59cc737e
         clusterId: 498ae72f-411f-11eb-9d07-046c59cc737e
         isActive: true
@@ -1388,6 +1392,18 @@ components:
           example: 2021-10-23T01:21:10Z
           format: date-time
           type: string
+        size:
+          description: Size of all base backups including the wal size in MB.
+          example: 2052
+          type: integer
+        location:
+          description: The S3 location where the backups will be stored.
+          example: de
+          type: string
+          x-extensible-enum:
+          - de
+          - eu-south-2
+          - eu-central-2
       type: object
     BackupLocation:
       description: The S3 location where the backups will be stored.
@@ -1399,12 +1415,13 @@ components:
       - eu-central-2
     MaintenanceWindow:
       description: |
-        A weekly 4 hour-long window, during which maintenance might occur
+        A weekly 4 hour-long window, during which maintenance might occur.
       example:
         dayOfTheWeek: Monday
         time: 16:30:59
       properties:
         time:
+          description: Start of the maintenance window in UTC time.
           example: 16:30:59
           type: string
         dayOfTheWeek:
@@ -1519,15 +1536,15 @@ components:
       allOf:
       - $ref: '#/components/schemas/ClusterList_allOf'
       - $ref: '#/components/schemas/Pagination'
-      description: List of clusters
+      description: List of clusters.
       type: object
     ClusterBackupList:
       allOf:
       - $ref: '#/components/schemas/ClusterBackupList_allOf'
       - $ref: '#/components/schemas/Pagination'
-      description: List of backups
+      description: List of backups.
     PostgresVersionList:
-      description: list of PostgreSQL versions
+      description: List of PostgreSQL versions.
       example:
         data:
         - name: "12"

@@ -1,17 +1,30 @@
 # DBUser
 
-Credentials for the database user to be created.
-
-
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Username** | **string** | The username for the initial postgres user. some system usernames are restricted (e.g. \&quot;postgres\&quot;, \&quot;admin\&quot;, \&quot;standby\&quot;).  | |
+|**Username** | **string** | The username for the initial PostgreSQL user. Some system usernames are restricted (e.g. \&quot;postgres\&quot;, \&quot;admin\&quot;, \&quot;standby\&quot;).  | |
 |**Password** | **string** |  | |
 
 ## Methods
 
+### NewDBUser
+
+`func NewDBUser(username string, password string, ) *DBUser`
+
+NewDBUser instantiates a new DBUser object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewDBUserWithDefaults
+
+`func NewDBUserWithDefaults() *DBUser`
+
+NewDBUserWithDefaults instantiates a new DBUser object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
 
 ### GetUsername
 

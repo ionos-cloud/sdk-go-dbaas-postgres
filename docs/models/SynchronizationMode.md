@@ -1,14 +1,9 @@
 # SynchronizationMode
 
-Represents different modes of replication. 
+## Properties
 
-## PossibleValues
-|Value |
-|------------ |
-|ASYNCHRONOUS |
-|SYNCHRONOUS |
-|STRICTLY_SYNCHRONOUS |
-
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
 
 
 

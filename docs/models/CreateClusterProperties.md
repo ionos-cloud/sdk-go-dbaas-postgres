@@ -1,8 +1,5 @@
 # CreateClusterProperties
 
-Properties with all data needed to create a new PostgreSQL cluster. 
-
-
 ## Properties
 
 |Name | Type | Description | Notes|
@@ -24,6 +21,22 @@ Properties with all data needed to create a new PostgreSQL cluster.
 
 ## Methods
 
+### NewCreateClusterProperties
+
+`func NewCreateClusterProperties(postgresVersion string, instances int32, cores int32, ram int32, storageSize int32, storageType StorageType, connections []Connection, location string, displayName string, credentials DBUser, synchronizationMode SynchronizationMode, ) *CreateClusterProperties`
+
+NewCreateClusterProperties instantiates a new CreateClusterProperties object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewCreateClusterPropertiesWithDefaults
+
+`func NewCreateClusterPropertiesWithDefaults() *CreateClusterProperties`
+
+NewCreateClusterPropertiesWithDefaults instantiates a new CreateClusterProperties object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
 
 ### GetPostgresVersion
 

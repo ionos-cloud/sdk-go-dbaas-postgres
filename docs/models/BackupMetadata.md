@@ -1,8 +1,5 @@
 # BackupMetadata
 
-Metadata of the backup resource.
-
-
 ## Properties
 
 |Name | Type | Description | Notes|
@@ -12,6 +9,22 @@ Metadata of the backup resource.
 
 ## Methods
 
+### NewBackupMetadata
+
+`func NewBackupMetadata() *BackupMetadata`
+
+NewBackupMetadata instantiates a new BackupMetadata object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewBackupMetadataWithDefaults
+
+`func NewBackupMetadataWithDefaults() *BackupMetadata`
+
+NewBackupMetadataWithDefaults instantiates a new BackupMetadata object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
 
 ### GetCreatedDate
 

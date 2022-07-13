@@ -1,8 +1,5 @@
 # PostgresVersionList
 
-list of PostgreSQL versions
-
-
 ## Properties
 
 |Name | Type | Description | Notes|
@@ -11,6 +8,22 @@ list of PostgreSQL versions
 
 ## Methods
 
+### NewPostgresVersionList
+
+`func NewPostgresVersionList() *PostgresVersionList`
+
+NewPostgresVersionList instantiates a new PostgresVersionList object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewPostgresVersionListWithDefaults
+
+`func NewPostgresVersionListWithDefaults() *PostgresVersionList`
+
+NewPostgresVersionListWithDefaults instantiates a new PostgresVersionList object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
 
 ### GetData
 

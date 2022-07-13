@@ -1,17 +1,30 @@
 # MaintenanceWindow
 
-A weekly 4 hour-long window, during which maintenance might occur 
-
-
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Time** | **string** |  | |
+|**Time** | **string** | Start of the maintenance window in UTC time. | |
 |**DayOfTheWeek** | [**DayOfTheWeek**](DayOfTheWeek.md) |  | |
 
 ## Methods
 
+### NewMaintenanceWindow
+
+`func NewMaintenanceWindow(time string, dayOfTheWeek DayOfTheWeek, ) *MaintenanceWindow`
+
+NewMaintenanceWindow instantiates a new MaintenanceWindow object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewMaintenanceWindowWithDefaults
+
+`func NewMaintenanceWindowWithDefaults() *MaintenanceWindow`
+
+NewMaintenanceWindowWithDefaults instantiates a new MaintenanceWindow object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
 
 ### GetTime
 

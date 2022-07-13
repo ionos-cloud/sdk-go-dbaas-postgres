@@ -1,8 +1,5 @@
 # Connection
 
-Details about the network connection for your cluster.
-
-
 ## Properties
 
 |Name | Type | Description | Notes|
@@ -13,6 +10,22 @@ Details about the network connection for your cluster.
 
 ## Methods
 
+### NewConnection
+
+`func NewConnection(datacenterId string, lanId string, cidr string, ) *Connection`
+
+NewConnection instantiates a new Connection object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewConnectionWithDefaults
+
+`func NewConnectionWithDefaults() *Connection`
+
+NewConnectionWithDefaults instantiates a new Connection object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
 
 ### GetDatacenterId
 

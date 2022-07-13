@@ -1,16 +1,9 @@
 # State
 
-The current status reported back by the cluster.
+## Properties
 
-## PossibleValues
-|Value |
-|------------ |
-|AVAILABLE |
-|BUSY |
-|DESTROYING |
-|FAILED |
-|UNKNOWN |
-
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
 
 
 

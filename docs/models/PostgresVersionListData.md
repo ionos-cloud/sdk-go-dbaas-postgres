@@ -1,7 +1,5 @@
 # PostgresVersionListData
 
-
-
 ## Properties
 
 |Name | Type | Description | Notes|
@@ -10,6 +8,22 @@
 
 ## Methods
 
+### NewPostgresVersionListData
+
+`func NewPostgresVersionListData() *PostgresVersionListData`
+
+NewPostgresVersionListData instantiates a new PostgresVersionListData object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewPostgresVersionListDataWithDefaults
+
+`func NewPostgresVersionListDataWithDefaults() *PostgresVersionListData`
+
+NewPostgresVersionListDataWithDefaults instantiates a new PostgresVersionListData object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
 
 ### GetName
 

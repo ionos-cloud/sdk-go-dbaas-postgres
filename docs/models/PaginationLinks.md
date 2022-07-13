@@ -1,8 +1,5 @@
 # PaginationLinks
 
-URLs to navigate the different pages. As of now we always only return a single page. 
-
-
 ## Properties
 
 |Name | Type | Description | Notes|
@@ -13,6 +10,22 @@ URLs to navigate the different pages. As of now we always only return a single p
 
 ## Methods
 
+### NewPaginationLinks
+
+`func NewPaginationLinks() *PaginationLinks`
+
+NewPaginationLinks instantiates a new PaginationLinks object
+This constructor will assign default values to properties that have it defined,
+and makes sure properties required by API are set, but the set of arguments
+will change when the set of required properties is changed
+
+### NewPaginationLinksWithDefaults
+
+`func NewPaginationLinksWithDefaults() *PaginationLinks`
+
+NewPaginationLinksWithDefaults instantiates a new PaginationLinks object
+This constructor will only assign default values to properties that have it defined,
+but it doesn't guarantee that properties required by API are set
 
 ### GetPrev
 
