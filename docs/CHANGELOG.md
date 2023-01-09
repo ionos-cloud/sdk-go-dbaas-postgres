@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v1.0.5 (January, 2023)
+
+### Enhancements:
+* Added logger and logger level
+
 ## v1.0.4 (July, 2022)
 
 ### Features
