@@ -5,11 +5,11 @@ info:
     can be managed through a browser-based "Data Center Designer" (DCD) tool or
     via an easy to use API.
 
-    The API allows you to create additional database clusters or modify existing
+    The API allows you to create additional PostgreSQL database clusters or modify existing
     ones. It is designed to allow users to leverage the same power and
     flexibility found within the DCD visual tool. Both tools are consistent with
     their concepts and lend well to making the experience smooth and intuitive.
-  title: IONOS DBaaS REST API
+  title: IONOS DBaaS PostgreSQL REST API
   version: 1.0.0
 servers:
 - description: Production
@@ -233,7 +233,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchClusterRequest'
-        description: The modified cluster.
+        description: Part of the cluster which should be modified.
         required: true
       responses:
         "200":
@@ -827,6 +827,10 @@ components:
       description: The friendly name of your cluster.
       example: PostgreSQL cluster
       type: string
+    DNSName:
+      description: The DNS name pointing to your cluster.
+      example: pg.example.com
+      type: string
     CreateClusterRequest:
       description: |
         Request payload with all data needed to create a new PostgreSQL cluster.
@@ -842,7 +846,7 @@ components:
         properties:
           instances: 2
           credentials:
-            password: password
+            password: password123
             username: db-admin
           displayName: PostgreSQL cluster
           fromBackup:
@@ -875,7 +879,7 @@ components:
       example:
         instances: 2
         credentials:
-          password: password
+          password: password123
           username: db-admin
         displayName: PostgreSQL cluster
         fromBackup:
@@ -1097,7 +1101,7 @@ components:
     DBUser:
       description: Credentials for the database user to be created.
       example:
-        password: password
+        password: password123
         username: db-admin
       properties:
         username:
@@ -1107,7 +1111,8 @@ components:
           example: db-admin
           type: string
         password:
-          example: password
+          example: password123
+          minLength: 10
           type: string
       required:
       - password
@@ -1214,12 +1219,14 @@ components:
           lastModifiedByUserId: 87f9a82e-b28d-49ed-9d04-fba2c0459cd3
         id: 498ae72f-411f-11eb-9d07-046c59cc737e
         properties:
+          instances: 2
+          displayName: PostgreSQL cluster
+          dnsName: pg.example.com
+          postgresVersion: "13"
           maintenanceWindow:
             dayOfTheWeek: Monday
             time: 16:30:59
           cores: 4
-          instances: 2
-          displayName: PostgreSQL cluster
           backupLocation: de
           storageSize: 5000
           storageType: HDD
@@ -1229,7 +1236,6 @@ components:
           - datacenterId: 5a029f4a-72e5-11ec-90d6-0242ac120003
             cidr: 192.168.1.100/24
             lanId: "2"
-          postgresVersion: "13"
           ram: 2048
       properties:
         type:
@@ -1246,12 +1252,14 @@ components:
     ClusterProperties:
       description: Properties of a database cluster.
       example:
+        instances: 2
+        displayName: PostgreSQL cluster
+        dnsName: pg.example.com
+        postgresVersion: "13"
         maintenanceWindow:
           dayOfTheWeek: Monday
           time: 16:30:59
         cores: 4
-        instances: 2
-        displayName: PostgreSQL cluster
         backupLocation: de
         storageSize: 5000
         storageType: HDD
@@ -1261,7 +1269,6 @@ components:
         - datacenterId: 5a029f4a-72e5-11ec-90d6-0242ac120003
           cidr: 192.168.1.100/24
           lanId: "2"
-        postgresVersion: "13"
         ram: 2048
       properties:
         displayName:
@@ -1286,6 +1293,10 @@ components:
           - es/vit
           - us/ewr
           - us/las
+        dnsName:
+          description: The DNS name pointing to your cluster.
+          example: pg.example.com
+          type: string
         backupLocation:
           description: The S3 location where the backups will be stored.
           example: de

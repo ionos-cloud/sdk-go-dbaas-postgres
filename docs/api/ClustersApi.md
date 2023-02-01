@@ -71,7 +71,7 @@ Other parameters are passed through a pointer to an apiClusterPostgresVersionsGe
 
 ### Return type
 
-[**PostgresVersionList**](PostgresVersionList.md)
+[**PostgresVersionList**](../models/PostgresVersionList.md)
 
 ### HTTP request headers
 
@@ -137,7 +137,7 @@ Other parameters are passed through a pointer to an apiClustersDeleteRequest str
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### HTTP request headers
 
@@ -203,7 +203,7 @@ Other parameters are passed through a pointer to an apiClustersFindByIdRequest s
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### HTTP request headers
 
@@ -267,7 +267,7 @@ Other parameters are passed through a pointer to an apiClustersGetRequest struct
 
 ### Return type
 
-[**ClusterList**](ClusterList.md)
+[**ClusterList**](../models/ClusterList.md)
 
 ### HTTP request headers
 
@@ -303,7 +303,7 @@ import (
 
 func main() {
     clusterId := "clusterId_example" // string | The unique ID of the cluster.
-    patchClusterRequest := *openapiclient.NewPatchClusterRequest() // PatchClusterRequest | The modified cluster.
+    patchClusterRequest := *openapiclient.NewPatchClusterRequest() // PatchClusterRequest | Part of the cluster which should be modified.
 
     configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "HOST_URL")
     apiClient := ionoscloud.NewAPIClient(configuration)
@@ -332,11 +332,11 @@ Other parameters are passed through a pointer to an apiClustersPatchRequest stru
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **patchClusterRequest** | [**PatchClusterRequest**](PatchClusterRequest.md) | The modified cluster. | |
+| **patchClusterRequest** | [**PatchClusterRequest**](../models/PatchClusterRequest.md) | Part of the cluster which should be modified. | |
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### HTTP request headers
 
@@ -396,11 +396,11 @@ Other parameters are passed through a pointer to an apiClustersPostRequest struc
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **createClusterRequest** | [**CreateClusterRequest**](CreateClusterRequest.md) | The cluster to be created. | |
+| **createClusterRequest** | [**CreateClusterRequest**](../models/CreateClusterRequest.md) | The cluster to be created. | |
 
 ### Return type
 
-[**ClusterResponse**](ClusterResponse.md)
+[**ClusterResponse**](../models/ClusterResponse.md)
 
 ### HTTP request headers
 
@@ -458,7 +458,7 @@ Other parameters are passed through a pointer to an apiPostgresVersionsGetReques
 
 ### Return type
 
-[**PostgresVersionList**](PostgresVersionList.md)
+[**PostgresVersionList**](../models/PostgresVersionList.md)
 
 ### HTTP request headers
 

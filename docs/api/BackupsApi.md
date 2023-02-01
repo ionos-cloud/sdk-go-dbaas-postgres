@@ -67,7 +67,7 @@ Other parameters are passed through a pointer to an apiClusterBackupsGetRequest 
 
 ### Return type
 
-[**ClusterBackupList**](ClusterBackupList.md)
+[**ClusterBackupList**](../models/ClusterBackupList.md)
 
 ### HTTP request headers
 
@@ -133,7 +133,7 @@ Other parameters are passed through a pointer to an apiClustersBackupsFindByIdRe
 
 ### Return type
 
-[**BackupResponse**](BackupResponse.md)
+[**BackupResponse**](../models/BackupResponse.md)
 
 ### HTTP request headers
 
@@ -191,7 +191,7 @@ Other parameters are passed through a pointer to an apiClustersBackupsGetRequest
 
 ### Return type
 
-[**ClusterBackupList**](ClusterBackupList.md)
+[**ClusterBackupList**](../models/ClusterBackupList.md)
 
 ### HTTP request headers
 
