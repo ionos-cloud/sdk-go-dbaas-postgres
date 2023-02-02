@@ -16,6 +16,29 @@ import (
 	"time"
 )
 
+// ToPtr - returns a pointer to the given value.
+func ToPtr[T any](v T) *T {
+	return &v
+}
+
+// ToValue - returns the value of the pointer passed in
+func ToValue[T any](ptr *T) T {
+	return *ptr
+}
+
+// ToValueDefault - returns the value of the pointer passed in, or the default type value if the pointer is nil
+func ToValueDefault[T any](ptr *T) T {
+	var defaultVal T
+	if ptr == nil {
+		return defaultVal
+	}
+	return *ptr
+}
+
+func SliceToValueDefault[T any](ptrSlice *[]T) []T {
+	return append([]T{}, *ptrSlice...)
+}
+
 // PtrBool - returns a pointer to given boolean value.
 func PtrBool(v bool) *bool { return &v }
 
