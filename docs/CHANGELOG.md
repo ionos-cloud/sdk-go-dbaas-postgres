@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v1.1.1 (March, 2023)
+
+### Features
+
+* added new state for clusters: `DEGRADED`
+* added new parameters: `limit` and `offset`
+
 ## v1.0.5 (January, 2023)
 
 ### Enhancements:
