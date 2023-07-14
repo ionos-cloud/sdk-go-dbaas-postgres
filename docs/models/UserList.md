@@ -1,4 +1,4 @@
-# ClusterBackupList
+# UserList
 
 ## Properties
 
@@ -7,178 +7,184 @@
 |**Offset** | Pointer to **int32** | The offset specified in the request (if none was specified, the default offset is 0).  | [optional] [default to 0]|
 |**Limit** | Pointer to **int32** | The limit specified in the request (if none was specified, the default limit is 100).  | [optional] [default to 100]|
 |**Links** | Pointer to [**PaginationLinks**](PaginationLinks.md) |  | [optional] |
-|**Type** | Pointer to [**ResourceType**](ResourceType.md) |  | [optional] |
-|**Id** | Pointer to **string** | The unique ID of the resource. | [optional] |
-|**Items** | Pointer to [**[]BackupResponse**](BackupResponse.md) |  | [optional] |
+|**Type** | [**ResourceType**](ResourceType.md) |  | |
+|**Id** | **string** | The unique ID of the resource. | |
+|**Href** | **string** | Absolute URL of the resource. | |
+|**Items** | [**[]UserResource**](UserResource.md) |  | |
 
 ## Methods
 
-### NewClusterBackupList
+### NewUserList
 
-`func NewClusterBackupList() *ClusterBackupList`
+`func NewUserList(type_ ResourceType, id string, href string, items []UserResource, ) *UserList`
 
-NewClusterBackupList instantiates a new ClusterBackupList object
+NewUserList instantiates a new UserList object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewClusterBackupListWithDefaults
+### NewUserListWithDefaults
 
-`func NewClusterBackupListWithDefaults() *ClusterBackupList`
+`func NewUserListWithDefaults() *UserList`
 
-NewClusterBackupListWithDefaults instantiates a new ClusterBackupList object
+NewUserListWithDefaults instantiates a new UserList object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetOffset
 
-`func (o *ClusterBackupList) GetOffset() int32`
+`func (o *UserList) GetOffset() int32`
 
 GetOffset returns the Offset field if non-nil, zero value otherwise.
 
 ### GetOffsetOk
 
-`func (o *ClusterBackupList) GetOffsetOk() (*int32, bool)`
+`func (o *UserList) GetOffsetOk() (*int32, bool)`
 
 GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetOffset
 
-`func (o *ClusterBackupList) SetOffset(v int32)`
+`func (o *UserList) SetOffset(v int32)`
 
 SetOffset sets Offset field to given value.
 
 ### HasOffset
 
-`func (o *ClusterBackupList) HasOffset() bool`
+`func (o *UserList) HasOffset() bool`
 
 HasOffset returns a boolean if a field has been set.
 
 ### GetLimit
 
-`func (o *ClusterBackupList) GetLimit() int32`
+`func (o *UserList) GetLimit() int32`
 
 GetLimit returns the Limit field if non-nil, zero value otherwise.
 
 ### GetLimitOk
 
-`func (o *ClusterBackupList) GetLimitOk() (*int32, bool)`
+`func (o *UserList) GetLimitOk() (*int32, bool)`
 
 GetLimitOk returns a tuple with the Limit field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLimit
 
-`func (o *ClusterBackupList) SetLimit(v int32)`
+`func (o *UserList) SetLimit(v int32)`
 
 SetLimit sets Limit field to given value.
 
 ### HasLimit
 
-`func (o *ClusterBackupList) HasLimit() bool`
+`func (o *UserList) HasLimit() bool`
 
 HasLimit returns a boolean if a field has been set.
 
 ### GetLinks
 
-`func (o *ClusterBackupList) GetLinks() PaginationLinks`
+`func (o *UserList) GetLinks() PaginationLinks`
 
 GetLinks returns the Links field if non-nil, zero value otherwise.
 
 ### GetLinksOk
 
-`func (o *ClusterBackupList) GetLinksOk() (*PaginationLinks, bool)`
+`func (o *UserList) GetLinksOk() (*PaginationLinks, bool)`
 
 GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetLinks
 
-`func (o *ClusterBackupList) SetLinks(v PaginationLinks)`
+`func (o *UserList) SetLinks(v PaginationLinks)`
 
 SetLinks sets Links field to given value.
 
 ### HasLinks
 
-`func (o *ClusterBackupList) HasLinks() bool`
+`func (o *UserList) HasLinks() bool`
 
 HasLinks returns a boolean if a field has been set.
 
 ### GetType
 
-`func (o *ClusterBackupList) GetType() ResourceType`
+`func (o *UserList) GetType() ResourceType`
 
 GetType returns the Type field if non-nil, zero value otherwise.
 
 ### GetTypeOk
 
-`func (o *ClusterBackupList) GetTypeOk() (*ResourceType, bool)`
+`func (o *UserList) GetTypeOk() (*ResourceType, bool)`
 
 GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetType
 
-`func (o *ClusterBackupList) SetType(v ResourceType)`
+`func (o *UserList) SetType(v ResourceType)`
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *ClusterBackupList) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetId
 
-`func (o *ClusterBackupList) GetId() string`
+`func (o *UserList) GetId() string`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ClusterBackupList) GetIdOk() (*string, bool)`
+`func (o *UserList) GetIdOk() (*string, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ClusterBackupList) SetId(v string)`
+`func (o *UserList) SetId(v string)`
 
 SetId sets Id field to given value.
 
-### HasId
 
-`func (o *ClusterBackupList) HasId() bool`
+### GetHref
 
-HasId returns a boolean if a field has been set.
+`func (o *UserList) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *UserList) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *UserList) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
 
 ### GetItems
 
-`func (o *ClusterBackupList) GetItems() []BackupResponse`
+`func (o *UserList) GetItems() []UserResource`
 
 GetItems returns the Items field if non-nil, zero value otherwise.
 
 ### GetItemsOk
 
-`func (o *ClusterBackupList) GetItemsOk() (*[]BackupResponse, bool)`
+`func (o *UserList) GetItemsOk() (*[]UserResource, bool)`
 
 GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItems
 
-`func (o *ClusterBackupList) SetItems(v []BackupResponse)`
+`func (o *UserList) SetItems(v []UserResource)`
 
 SetItems sets Items field to given value.
 
-### HasItems
-
-`func (o *ClusterBackupList) HasItems() bool`
-
-HasItems returns a boolean if a field has been set.
 
 
 

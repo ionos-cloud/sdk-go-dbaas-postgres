@@ -1,132 +1,138 @@
-# ClusterResponse
+# UserResource
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Type** | Pointer to [**ResourceType**](ResourceType.md) |  | [optional] |
-|**Id** | Pointer to **string** | The unique ID of the resource. | [optional] |
-|**Metadata** | Pointer to [**ClusterMetadata**](ClusterMetadata.md) |  | [optional] |
-|**Properties** | Pointer to [**ClusterProperties**](ClusterProperties.md) |  | [optional] |
+|**Type** | [**ResourceType**](ResourceType.md) |  | |
+|**Id** | **string** | The unique ID of the resource. | |
+|**Href** | **string** | Absolute URL of the resource. | |
+|**Metadata** | Pointer to [**Metadata**](Metadata.md) |  | [optional] |
+|**Properties** | [**UserProperties**](UserProperties.md) |  | |
 
 ## Methods
 
-### NewClusterResponse
+### NewUserResource
 
-`func NewClusterResponse() *ClusterResponse`
+`func NewUserResource(type_ ResourceType, id string, href string, properties UserProperties, ) *UserResource`
 
-NewClusterResponse instantiates a new ClusterResponse object
+NewUserResource instantiates a new UserResource object
 This constructor will assign default values to properties that have it defined,
 and makes sure properties required by API are set, but the set of arguments
 will change when the set of required properties is changed
 
-### NewClusterResponseWithDefaults
+### NewUserResourceWithDefaults
 
-`func NewClusterResponseWithDefaults() *ClusterResponse`
+`func NewUserResourceWithDefaults() *UserResource`
 
-NewClusterResponseWithDefaults instantiates a new ClusterResponse object
+NewUserResourceWithDefaults instantiates a new UserResource object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
 ### GetType
 
-`func (o *ClusterResponse) GetType() ResourceType`
+`func (o *UserResource) GetType() ResourceType`
 
 GetType returns the Type field if non-nil, zero value otherwise.
 
 ### GetTypeOk
 
-`func (o *ClusterResponse) GetTypeOk() (*ResourceType, bool)`
+`func (o *UserResource) GetTypeOk() (*ResourceType, bool)`
 
 GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetType
 
-`func (o *ClusterResponse) SetType(v ResourceType)`
+`func (o *UserResource) SetType(v ResourceType)`
 
 SetType sets Type field to given value.
 
-### HasType
-
-`func (o *ClusterResponse) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetId
 
-`func (o *ClusterResponse) GetId() string`
+`func (o *UserResource) GetId() string`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *ClusterResponse) GetIdOk() (*string, bool)`
+`func (o *UserResource) GetIdOk() (*string, bool)`
 
 GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetId
 
-`func (o *ClusterResponse) SetId(v string)`
+`func (o *UserResource) SetId(v string)`
 
 SetId sets Id field to given value.
 
-### HasId
 
-`func (o *ClusterResponse) HasId() bool`
+### GetHref
 
-HasId returns a boolean if a field has been set.
+`func (o *UserResource) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *UserResource) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *UserResource) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
 
 ### GetMetadata
 
-`func (o *ClusterResponse) GetMetadata() ClusterMetadata`
+`func (o *UserResource) GetMetadata() Metadata`
 
 GetMetadata returns the Metadata field if non-nil, zero value otherwise.
 
 ### GetMetadataOk
 
-`func (o *ClusterResponse) GetMetadataOk() (*ClusterMetadata, bool)`
+`func (o *UserResource) GetMetadataOk() (*Metadata, bool)`
 
 GetMetadataOk returns a tuple with the Metadata field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMetadata
 
-`func (o *ClusterResponse) SetMetadata(v ClusterMetadata)`
+`func (o *UserResource) SetMetadata(v Metadata)`
 
 SetMetadata sets Metadata field to given value.
 
 ### HasMetadata
 
-`func (o *ClusterResponse) HasMetadata() bool`
+`func (o *UserResource) HasMetadata() bool`
 
 HasMetadata returns a boolean if a field has been set.
 
 ### GetProperties
 
-`func (o *ClusterResponse) GetProperties() ClusterProperties`
+`func (o *UserResource) GetProperties() UserProperties`
 
 GetProperties returns the Properties field if non-nil, zero value otherwise.
 
 ### GetPropertiesOk
 
-`func (o *ClusterResponse) GetPropertiesOk() (*ClusterProperties, bool)`
+`func (o *UserResource) GetPropertiesOk() (*UserProperties, bool)`
 
 GetPropertiesOk returns a tuple with the Properties field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProperties
 
-`func (o *ClusterResponse) SetProperties(v ClusterProperties)`
+`func (o *UserResource) SetProperties(v UserProperties)`
 
 SetProperties sets Properties field to given value.
 
-### HasProperties
-
-`func (o *ClusterResponse) HasProperties() bool`
-
-HasProperties returns a boolean if a field has been set.
 
 
 

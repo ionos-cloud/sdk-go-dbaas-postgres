@@ -39,7 +39,7 @@ import (
 )
 
 func main() {
-    clusterId := "clusterId_example" // string | The unique ID of the cluster.
+    clusterId := "498ae72f-411f-11eb-9d07-046c59cc737e" // string | The unique ID of the cluster.
 
     configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "HOST_URL")
     apiClient := ionoscloud.NewAPIClient(configuration)
@@ -105,11 +105,11 @@ import (
 )
 
 func main() {
-    clusterId := "clusterId_example" // string | The unique ID of the cluster.
+    clusterId := "498ae72f-411f-11eb-9d07-046c59cc737e" // string | The unique ID of the cluster.
 
     configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "HOST_URL")
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resource, resp, err := apiClient.ClustersApi.ClustersDelete(context.Background(), clusterId).Execute()
+    resp, err := apiClient.ClustersApi.ClustersDelete(context.Background(), clusterId).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ClustersApi.ClustersDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", resp)
@@ -171,7 +171,7 @@ import (
 )
 
 func main() {
-    clusterId := "clusterId_example" // string | The unique ID of the cluster.
+    clusterId := "498ae72f-411f-11eb-9d07-046c59cc737e" // string | The unique ID of the cluster.
 
     configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "HOST_URL")
     apiClient := ionoscloud.NewAPIClient(configuration)
@@ -308,7 +308,7 @@ import (
 )
 
 func main() {
-    clusterId := "clusterId_example" // string | The unique ID of the cluster.
+    clusterId := "498ae72f-411f-11eb-9d07-046c59cc737e" // string | The unique ID of the cluster.
     patchClusterRequest := *openapiclient.NewPatchClusterRequest() // PatchClusterRequest | Part of the cluster which should be modified.
 
     configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "HOST_URL")

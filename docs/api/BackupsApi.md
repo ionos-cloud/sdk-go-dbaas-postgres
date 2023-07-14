@@ -37,7 +37,7 @@ import (
 )
 
 func main() {
-    clusterId := "clusterId_example" // string | The unique ID of the cluster.
+    clusterId := "498ae72f-411f-11eb-9d07-046c59cc737e" // string | The unique ID of the cluster.
     limit := int32(100) // int32 | The maximum number of elements to return. Use together with 'offset' for pagination. (optional) (default to 100)
     offset := int32(200) // int32 | The first element to return. Use together with 'limit' for pagination. (optional) (default to 0)
 
@@ -107,7 +107,7 @@ import (
 )
 
 func main() {
-    backupId := "backupId_example" // string | The unique ID of the backup.
+    backupId := "498ae72f-411f-11eb-9d07-046c59cc737e-4oymiqu-12" // string | The unique ID of the backup.
 
     configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "HOST_URL")
     apiClient := ionoscloud.NewAPIClient(configuration)
