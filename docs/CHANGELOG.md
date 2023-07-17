@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## v1.1.2 (July, 2023)
+
+### Features
+
+* Added functionality for `users` endpoint
+* Added functionality for `databases` endpoint
+
 ## v1.1.1 (March, 2023)
 
 ### Features
