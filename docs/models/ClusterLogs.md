@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Instances** | Pointer to [**[]ClusterLogsInstancesInner**](ClusterLogsInstancesInner.md) |  | [optional] |
+|**Instances** | Pointer to [**[]ClusterLogsInstances**](ClusterLogsInstances.md) |  | [optional] |
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetInstances
 
-`func (o *ClusterLogs) GetInstances() []ClusterLogsInstancesInner`
+`func (o *ClusterLogs) GetInstances() []ClusterLogsInstances`
 
 GetInstances returns the Instances field if non-nil, zero value otherwise.
 
 ### GetInstancesOk
 
-`func (o *ClusterLogs) GetInstancesOk() (*[]ClusterLogsInstancesInner, bool)`
+`func (o *ClusterLogs) GetInstancesOk() (*[]ClusterLogsInstances, bool)`
 
 GetInstancesOk returns a tuple with the Instances field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetInstances
 
-`func (o *ClusterLogs) SetInstances(v []ClusterLogsInstancesInner)`
+`func (o *ClusterLogs) SetInstances(v []ClusterLogsInstances)`
 
 SetInstances sets Instances field to given value.
 

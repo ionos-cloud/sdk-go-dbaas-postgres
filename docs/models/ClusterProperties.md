@@ -17,6 +17,7 @@
 |**Connections** | Pointer to [**[]Connection**](Connection.md) |  | [optional] |
 |**MaintenanceWindow** | Pointer to [**MaintenanceWindow**](MaintenanceWindow.md) |  | [optional] |
 |**SynchronizationMode** | Pointer to [**SynchronizationMode**](SynchronizationMode.md) |  | [optional] |
+|**ConnectionPooler** | Pointer to [**ConnectionPooler**](ConnectionPooler.md) |  | [optional] |
 
 ## Methods
 
@@ -361,6 +362,31 @@ SetSynchronizationMode sets SynchronizationMode field to given value.
 `func (o *ClusterProperties) HasSynchronizationMode() bool`
 
 HasSynchronizationMode returns a boolean if a field has been set.
+
+### GetConnectionPooler
+
+`func (o *ClusterProperties) GetConnectionPooler() ConnectionPooler`
+
+GetConnectionPooler returns the ConnectionPooler field if non-nil, zero value otherwise.
+
+### GetConnectionPoolerOk
+
+`func (o *ClusterProperties) GetConnectionPoolerOk() (*ConnectionPooler, bool)`
+
+GetConnectionPoolerOk returns a tuple with the ConnectionPooler field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetConnectionPooler
+
+`func (o *ClusterProperties) SetConnectionPooler(v ConnectionPooler)`
+
+SetConnectionPooler sets ConnectionPooler field to given value.
+
+### HasConnectionPooler
+
+`func (o *ClusterProperties) HasConnectionPooler() bool`
+
+HasConnectionPooler returns a boolean if a field has been set.
 
 
 

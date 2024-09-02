@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Data** | Pointer to [**[]PostgresVersionListDataInner**](PostgresVersionListDataInner.md) |  | [optional] |
+|**Data** | Pointer to [**[]PostgresVersionListData**](PostgresVersionListData.md) |  | [optional] |
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetData
 
-`func (o *PostgresVersionList) GetData() []PostgresVersionListDataInner`
+`func (o *PostgresVersionList) GetData() []PostgresVersionListData`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *PostgresVersionList) GetDataOk() (*[]PostgresVersionListDataInner, bool)`
+`func (o *PostgresVersionList) GetDataOk() (*[]PostgresVersionListData, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *PostgresVersionList) SetData(v []PostgresVersionListDataInner)`
+`func (o *PostgresVersionList) SetData(v []PostgresVersionListData)`
 
 SetData sets Data field to given value.
 
