@@ -207,4 +207,3 @@ SetResourceURN sets ResourceURN field to given value.
 HasResourceURN returns a boolean if a field has been set.
 
 
-

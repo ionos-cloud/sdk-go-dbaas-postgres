@@ -72,4 +72,3 @@ SetRecoveryTargetTime sets RecoveryTargetTime field to given value.
 HasRecoveryTargetTime returns a boolean if a field has been set.
 
 
-

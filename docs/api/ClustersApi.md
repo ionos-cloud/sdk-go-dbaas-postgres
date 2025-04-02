@@ -10,7 +10,8 @@ All URIs are relative to *https://api.ionos.com/databases/postgresql*
 |[**ClustersGet**](ClustersApi.md#ClustersGet) | **Get** /clusters | List clusters|
 |[**ClustersPatch**](ClustersApi.md#ClustersPatch) | **Patch** /clusters/{clusterId} | Patch a cluster|
 |[**ClustersPost**](ClustersApi.md#ClustersPost) | **Post** /clusters | Create a cluster|
-|[**PostgresVersionsGet**](ClustersApi.md#PostgresVersionsGet) | **Get** /clusters/postgresversions | List PostgreSQL versions|
+|[**ClustersVersionsGet**](ClustersApi.md#ClustersVersionsGet) | **Get** /clusters/{clusterId}/versions | Supported PostgreSQL versions of cluster|
+|[**PostgresVersionsGet**](ClustersApi.md#PostgresVersionsGet) | **Get** /clusters/postgresversions | List all PostgreSQL versions|
 
 
 
@@ -79,6 +80,22 @@ Other parameters are passed through a pointer to an apiClusterPostgresVersionsGe
 - **Accept**: application/json
 
 
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"ClustersApiService.ClusterPostgresVersionsGet"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "ClustersApiService.ClusterPostgresVersionsGet": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "ClustersApiService.ClusterPostgresVersionsGet": {
+    "port": "8443",
+},
+})
+```
+
 
 ## ClustersDelete
 
@@ -145,6 +162,22 @@ Other parameters are passed through a pointer to an apiClustersDeleteRequest str
 - **Accept**: application/json
 
 
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"ClustersApiService.ClustersDelete"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "ClustersApiService.ClustersDelete": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "ClustersApiService.ClustersDelete": {
+    "port": "8443",
+},
+})
+```
+
 
 ## ClustersFindById
 
@@ -210,6 +243,22 @@ Other parameters are passed through a pointer to an apiClustersFindByIdRequest s
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"ClustersApiService.ClustersFindById"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "ClustersApiService.ClustersFindById": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "ClustersApiService.ClustersFindById": {
+    "port": "8443",
+},
+})
+```
 
 
 ## ClustersGet
@@ -281,6 +330,22 @@ Other parameters are passed through a pointer to an apiClustersGetRequest struct
 - **Accept**: application/json
 
 
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"ClustersApiService.ClustersGet"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "ClustersApiService.ClustersGet": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "ClustersApiService.ClustersGet": {
+    "port": "8443",
+},
+})
+```
+
 
 ## ClustersPatch
 
@@ -350,6 +415,22 @@ Other parameters are passed through a pointer to an apiClustersPatchRequest stru
 - **Accept**: application/json
 
 
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"ClustersApiService.ClustersPatch"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "ClustersApiService.ClustersPatch": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "ClustersApiService.ClustersPatch": {
+    "port": "8443",
+},
+})
+```
+
 
 ## ClustersPost
 
@@ -414,6 +495,104 @@ Other parameters are passed through a pointer to an apiClustersPostRequest struc
 - **Accept**: application/json
 
 
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"ClustersApiService.ClustersPost"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "ClustersApiService.ClustersPost": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "ClustersApiService.ClustersPost": {
+    "port": "8443",
+},
+})
+```
+
+
+## ClustersVersionsGet
+
+```go
+var result PostgresVersionList = ClustersVersionsGet(ctx, clusterId)
+                      .Execute()
+```
+
+Supported PostgreSQL versions of cluster
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go-dbaas-postgres"
+)
+
+func main() {
+    clusterId := "498ae72f-411f-11eb-9d07-046c59cc737e" // string | The unique ID of the cluster.
+
+    configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "HOST_URL")
+    apiClient := ionoscloud.NewAPIClient(configuration)
+    resource, resp, err := apiClient.ClustersApi.ClustersVersionsGet(context.Background(), clusterId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `ClustersApi.ClustersVersionsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", resp)
+    }
+    // response from `ClustersVersionsGet`: PostgresVersionList
+    fmt.Fprintf(os.Stdout, "Response from `ClustersApi.ClustersVersionsGet`: %v\n", resource)
+}
+```
+
+### Path Parameters
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**clusterId** | **string** | The unique ID of the cluster. | |
+
+### Other Parameters
+
+Other parameters are passed through a pointer to an apiClustersVersionsGetRequest struct via the builder pattern
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+
+### Return type
+
+[**PostgresVersionList**](../models/PostgresVersionList.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"ClustersApiService.ClustersVersionsGet"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "ClustersApiService.ClustersVersionsGet": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "ClustersApiService.ClustersVersionsGet": {
+    "port": "8443",
+},
+})
+```
+
 
 ## PostgresVersionsGet
 
@@ -422,7 +601,7 @@ var result PostgresVersionList = PostgresVersionsGet(ctx)
                       .Execute()
 ```
 
-List PostgreSQL versions
+List all PostgreSQL versions
 
 
 
@@ -471,4 +650,20 @@ Other parameters are passed through a pointer to an apiPostgresVersionsGetReques
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"ClustersApiService.PostgresVersionsGet"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "ClustersApiService.PostgresVersionsGet": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "ClustersApiService.PostgresVersionsGet": {
+    "port": "8443",
+},
+})
+```
 

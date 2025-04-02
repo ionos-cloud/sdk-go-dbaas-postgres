@@ -77,4 +77,3 @@ SetPoolMode sets PoolMode field to given value.
 HasPoolMode returns a boolean if a field has been set.
 
 
-

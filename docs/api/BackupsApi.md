@@ -81,6 +81,22 @@ Other parameters are passed through a pointer to an apiClusterBackupsGetRequest 
 - **Accept**: application/json
 
 
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"BackupsApiService.ClusterBackupsGet"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "BackupsApiService.ClusterBackupsGet": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "BackupsApiService.ClusterBackupsGet": {
+    "port": "8443",
+},
+})
+```
+
 
 ## ClustersBackupsFindById
 
@@ -146,6 +162,22 @@ Other parameters are passed through a pointer to an apiClustersBackupsFindByIdRe
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"BackupsApiService.ClustersBackupsFindById"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "BackupsApiService.ClustersBackupsFindById": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "BackupsApiService.ClustersBackupsFindById": {
+    "port": "8443",
+},
+})
+```
 
 
 ## ClustersBackupsGet
@@ -213,4 +245,20 @@ Other parameters are passed through a pointer to an apiClustersBackupsGetRequest
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"BackupsApiService.ClustersBackupsGet"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "BackupsApiService.ClustersBackupsGet": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "BackupsApiService.ClustersBackupsGet": {
+    "port": "8443",
+},
+})
+```
 

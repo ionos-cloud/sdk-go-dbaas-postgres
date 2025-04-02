@@ -77,4 +77,3 @@ SetState sets State field to given value.
 HasState returns a boolean if a field has been set.
 
 
-

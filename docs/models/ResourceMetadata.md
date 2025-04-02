@@ -51,4 +51,3 @@ SetMetadata sets Metadata field to given value.
 HasMetadata returns a boolean if a field has been set.
 
 
-

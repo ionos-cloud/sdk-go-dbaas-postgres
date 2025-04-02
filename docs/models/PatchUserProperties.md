@@ -51,4 +51,3 @@ SetPassword sets Password field to given value.
 HasPassword returns a boolean if a field has been set.
 
 
-

@@ -77,4 +77,3 @@ SetProperties sets Properties field to given value.
 HasProperties returns a boolean if a field has been set.
 
 
-

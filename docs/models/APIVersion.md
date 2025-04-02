@@ -77,4 +77,3 @@ SetSwaggerUrl sets SwaggerUrl field to given value.
 HasSwaggerUrl returns a boolean if a field has been set.
 
 
-

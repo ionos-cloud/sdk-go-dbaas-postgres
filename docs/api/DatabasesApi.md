@@ -76,6 +76,22 @@ Other parameters are passed through a pointer to an apiDatabasesDeleteRequest st
 - **Accept**: application/json
 
 
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"DatabasesApiService.DatabasesDelete"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "DatabasesApiService.DatabasesDelete": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "DatabasesApiService.DatabasesDelete": {
+    "port": "8443",
+},
+})
+```
+
 
 ## DatabasesGet
 
@@ -143,6 +159,22 @@ Other parameters are passed through a pointer to an apiDatabasesGetRequest struc
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
+
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"DatabasesApiService.DatabasesGet"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "DatabasesApiService.DatabasesGet": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "DatabasesApiService.DatabasesGet": {
+    "port": "8443",
+},
+})
+```
 
 
 ## DatabasesList
@@ -216,6 +248,22 @@ Other parameters are passed through a pointer to an apiDatabasesListRequest stru
 - **Accept**: application/json
 
 
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"DatabasesApiService.DatabasesList"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "DatabasesApiService.DatabasesList": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "DatabasesApiService.DatabasesList": {
+    "port": "8443",
+},
+})
+```
+
 
 ## DatabasesPost
 
@@ -284,4 +332,20 @@ Other parameters are passed through a pointer to an apiDatabasesPostRequest stru
 - **Content-Type**: application/json
 - **Accept**: application/json
 
+
+### URLs Configuration per Operation
+Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
+An operation is uniquely identified by `"DatabasesApiService.DatabasesPost"` string.
+Similar rules for overriding default operation server index and variables apply by using `sw.ContextOperationServerIndices` and `sw.ContextOperationServerVariables` context maps.
+
+```golang
+ctx := context.WithValue(context.Background(), {packageName}.ContextOperationServerIndices, map[string]int{
+    "DatabasesApiService.DatabasesPost": 2,
+})
+ctx = context.WithValue(context.Background(), {packageName}.ContextOperationServerVariables, map[string]map[string]string{
+    "DatabasesApiService.DatabasesPost": {
+    "port": "8443",
+},
+})
+```
 

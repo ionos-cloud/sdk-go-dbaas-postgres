@@ -67,4 +67,3 @@ SetDayOfTheWeek sets DayOfTheWeek field to given value.
 
 
 
-

@@ -181,4 +181,3 @@ SetLinks sets Links field to given value.
 HasLinks returns a boolean if a field has been set.
 
 
-

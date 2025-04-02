@@ -389,4 +389,3 @@ SetConnectionPooler sets ConnectionPooler field to given value.
 HasConnectionPooler returns a boolean if a field has been set.
 
 
-

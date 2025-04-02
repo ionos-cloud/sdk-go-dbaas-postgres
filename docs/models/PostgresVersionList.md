@@ -51,4 +51,3 @@ SetData sets Data field to given value.
 HasData returns a boolean if a field has been set.
 
 
-
